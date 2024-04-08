@@ -38,7 +38,7 @@ export default function Navbar(props) {
           </ul>
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }
 

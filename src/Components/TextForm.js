@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 
 /* 
 In this component i have learned about state(Components need to “remember” things: the current input value, the current image, 
@@ -34,9 +36,9 @@ export default function TextForm(props) {
     return (
         <>
             <div className="container my-3">
-                <h2>{props.heading}</h2>
+                <h2>{props.heading} <FontAwesomeIcon icon={faAlignLeft} beat size="sm" /></h2>{/* To display icon */}
                 <div className="mb-3">
-                    <textarea className="form-control" placeholder="Enter your text here.." id="myBox" rows="20" value={text} onChange={handleOnChange}></textarea>
+                    <textarea className="form-control" placeholder="Enter your text here.." id="myBox" rows="18" value={text} onChange={handleOnChange}></textarea>
                 </div>
                 <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to uppercase</button>
                 <button className="btn btn-primary mx-2" onClick={handleLowClick}>Convert to lowercase</button>
