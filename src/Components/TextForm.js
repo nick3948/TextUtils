@@ -62,7 +62,7 @@ export default function TextForm(props) {
     }
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(text)
+        navigator.clipboard.writeText(outputText)
             .then(() => { // we write in this way to display toast in react.
                 toast.success('Text copied successfully!', {
                     position: "bottom-right",
